@@ -14,6 +14,25 @@ const Navbar = () => {
             height={40}  
           />
          </Link>
+
+        <Image
+          src="/hamburger-menu.svg"
+          width={30}
+          height={30}
+          alt="Hamburger menu"
+          className="block md:hidden"
+        />
+
+        <ul className="flex-center gap-x-3 max-md:hidden md:gap-x-10">
+          <li>
+            <Link
+              href="https://www.jsmastery.pro/ultimate-next13-course"
+              target="_blank"
+            >
+              Next.js 13.4 Course
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   )
