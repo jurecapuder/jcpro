@@ -11,6 +11,7 @@ const Filters = () => {
         <button
           key={link}
           onClick={() => {}}
+          className="whitespace-nowrap rounded-lg px-8 py-2.5 capitalize"
         >
           {link}
         </button>
