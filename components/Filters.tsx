@@ -12,7 +12,7 @@ const Filters = () => {
           key={link}
           onClick={() => {}}
         >
-
+          {link}
         </button>
       ))}
     </ul>
