@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image"
-import React from 'react'
+import { useState } from 'react'
 import { Input } from "@/components/ui/input"
 
 const SearchForm = () => {
+  const [search, setSearch] = useState("");
+
   return (
     <form className="flex-center mx-auto mt-10 w-full sm:-mt-10 sm:px-5">
       <label className="flex-center relative w-full max-w-3xl">
