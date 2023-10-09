@@ -44,9 +44,9 @@ const ResourceCard = ({ id, title, image, downloadNumber }: Props) => {
           {downloadNumber}
         </div>
 
-        <Link
-          href={`/resource/${id}`}
-        />
+        <Link href={`/resource/${id}`}>
+          Download Now
+        </Link>
       </CardContent>
     </Card>
   )
