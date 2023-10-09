@@ -4,6 +4,8 @@ import SearchForm from "@/components/SearchForm"
 import { getResources } from "@/sanity/actions"
 import React from 'react'
 
+export const revalidate = 900;
+
 const page = async () => {
   const resources = await getResources({
     query: "",
