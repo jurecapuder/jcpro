@@ -44,7 +44,7 @@ const ResourceCard = ({ id, title, image, downloadNumber }: Props) => {
           {downloadNumber}
         </div>
 
-        <Link href={`/resource/${id}`} className="flex-center text-gradient_purple-blue body-semibold">
+        <Link href={`/resource/${id}`} className="flex-center text-gradient_purple-blue body-semibold gap-1.5">
           Download Now
 
           <Image
