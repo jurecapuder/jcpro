@@ -38,13 +38,9 @@ const ResourceCard = ({ id, title, image, downloadNumber, slug }: Props) => {
         </CardHeader>
       </Link>
 
-      <CardContent>
+      <CardContent className="flex-between mt-4 p-0">
         <p>Card Content</p>
       </CardContent>
-
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
     </Card>
   )
 }
