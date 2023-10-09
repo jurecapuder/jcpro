@@ -1,8 +1,6 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle
 } from "@/components/ui/card"
@@ -14,10 +12,9 @@ interface Props {
   title: string;
   image: string;
   downloadNumber: number;
-  slug: string;
 }
 
-const ResourceCard = ({ id, title, image, downloadNumber, slug }: Props) => {
+const ResourceCard = ({ id, title, image, downloadNumber }: Props) => {
   return (
     <Card className="w-full max-w-fit border-0 !bg-transparent sm:max-w-[356px]">
       <Link href={`/resource/${id}`}>
@@ -33,8 +30,6 @@ const ResourceCard = ({ id, title, image, downloadNumber, slug }: Props) => {
           </div>
 
           <CardTitle className="text-white paragraph-semibold line-clamp-1 w-full text-left">{title}</CardTitle>
-
-          <CardDescription>Card Description</CardDescription>
         </CardHeader>
       </Link>
 
@@ -48,6 +43,10 @@ const ResourceCard = ({ id, title, image, downloadNumber, slug }: Props) => {
           />
           {downloadNumber}
         </div>
+
+        <Link
+          href={`/resource/${id}`}
+        />
       </CardContent>
     </Card>
   )
