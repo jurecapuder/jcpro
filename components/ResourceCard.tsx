@@ -46,6 +46,13 @@ const ResourceCard = ({ id, title, image, downloadNumber }: Props) => {
 
         <Link href={`/resource/${id}`}>
           Download Now
+
+          <Image
+            src="/arrow-blue.svg"
+            width={13}
+            height={10}
+            alt="arrow"
+          />
         </Link>
       </CardContent>
     </Card>
