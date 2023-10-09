@@ -46,7 +46,7 @@ const ResourceCard = ({ id, title, image, downloadNumber, slug }: Props) => {
             height={20}
             alt="download"
           />
-          {`${downloadNumber}`}
+          {downloadNumber}
         </div>
       </CardContent>
     </Card>
