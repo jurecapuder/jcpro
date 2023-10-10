@@ -12,12 +12,18 @@ const Filters = () => {
   const searchParams = useSearchParams();
 
   const handleFilter = (link: string) => {
-    let newUrl = formUrlQuery({
-      params: searchParams.toString(),
-      key: "category",
-      value: null,
-    })
+    let newUrl = "";
+    
+    if(active === link) {
+      setActive("");
 
+      formUrlQuery({
+        params: searchParams.toString(),
+        key: "category",
+        value: null,
+      })
+    }
+    
     setActive(link);
   }
 
