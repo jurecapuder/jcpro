@@ -11,10 +11,10 @@ interface Props {
   searchParams: { [key: string]: string | undefined }
 }
 
-const page = async ({ searchParams }: Props) => {
+const Page = async ({ searchParams }: Props) => {
   const resources = await getResources({
     query: "",
-    category: "",
+    category: searchParams?.category || "",
     page: "1"
   })
 
@@ -55,4 +55,4 @@ const page = async ({ searchParams }: Props) => {
   )
 }
 
-export default page
+export default Page
