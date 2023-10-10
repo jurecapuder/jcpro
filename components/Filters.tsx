@@ -17,14 +17,21 @@ const Filters = () => {
     if(active === link) {
       setActive("");
 
-      formUrlQuery({
+      newUrl = formUrlQuery({
         params: searchParams.toString(),
         key: "category",
         value: null,
       })
+    } else {
+      setActive(link);
+
+      newUrl = formUrlQuery({
+        params: searchParams.toString(),
+        key: "category",
+        value: link.toLowerCase(),
+      })
     }
-    
-    setActive(link);
+
   }
 
   return (
