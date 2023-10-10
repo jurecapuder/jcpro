@@ -11,6 +11,8 @@ const Filters = () => {
 
   const searchParams = useSearchParams();
 
+  const router = useRouter();
+
   const handleFilter = (link: string) => {
     let newUrl = "";
     
@@ -32,6 +34,7 @@ const Filters = () => {
       })
     }
 
+    router.push(newUrl, { scroll: false });
   }
 
   return (
