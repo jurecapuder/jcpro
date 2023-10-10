@@ -7,7 +7,11 @@ import React from 'react'
 
 export const revalidate = 900;
 
-const page = async () => {
+interface Props {
+  searchParams: { [key: string]: string | undefined }
+}
+
+const page = async ({ searchParams }: Props) => {
   const resources = await getResources({
     query: "",
     category: "",
