@@ -1,10 +1,10 @@
 "use client";
 
 import { formUrlQuery } from "@/sanity/utils";
+import { useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import React, { useState } from 'react'
 
-const links = ["all", "Next 13", "Frontend", "Backend", "Fullstack"]
+const links = ["All", "Next 13", "Frontend", "Backend", "Fullstack"]
 
 const Filters = () => {
   const [active, setActive] = useState("");
@@ -21,8 +21,7 @@ const Filters = () => {
 
       newUrl = formUrlQuery({
         params: searchParams.toString(),
-        key: "category",
-        value: null,
+        keysToRemove: ["category"],
       })
     } else {
       setActive(link);
@@ -33,7 +32,7 @@ const Filters = () => {
         value: link.toLowerCase(),
       })
     }
-
+    
     router.push(newUrl, { scroll: false });
   }
 
@@ -42,8 +41,12 @@ const Filters = () => {
       {links.map((link) => (
         <button
           key={link}
-          onClick={() => {handleFilter(link)}}
-          className={`${active === link ? 'gradient_blue-purple' : ""} whitespace-nowrap rounded-lg px-8 py-2.5 capitalize`}
+          onClick={() => handleFilter(link)}
+          className={`${
+            active === link
+            ? "gradient_blue-purple"
+            : ""
+          } whitespace-nowrap rounded-lg px-8 py-2.5 capitalize`}
         >
           {link}
         </button>
